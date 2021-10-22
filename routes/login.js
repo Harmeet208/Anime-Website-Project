@@ -10,6 +10,8 @@ router.route('/').post((req,res)=>{
             }else{
                 res.send('Username And Password Do Not Match');
             }
+        }else if(err){
+            res.send('Error');
         }else{
             res.send('Username And Password Do Not Match');
         }
@@ -17,11 +19,3 @@ router.route('/').post((req,res)=>{
 });
 
 module.exports = router;
-
-
-
-
-
-
-
-
