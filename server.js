@@ -28,13 +28,6 @@ app.use('/home/login', loginRoute);
 app.use('/home/signup', signupRoute);
 app.use('/details/review', reviewRoute);
 
-
-// heroku deployment
-if(process.env.NODE_ENV === "production"){
-    app.use(express.static('/frontend/build'));
-}
-
-
 app.listen(PORT, ()=>{
     console.log('Listening To Port', PORT);
 });
